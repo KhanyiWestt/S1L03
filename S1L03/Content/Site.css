@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #A8CD89;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -22,3 +23,94 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.main-content {
+    background-color: #B8D576;
+    padding: 40px 20px 40px 20px;
+}
+
+.menupages {
+    display: flex;
+    background-color: #181C14;
+    color:white;
+    padding:10px;
+}
+.menupages div{
+    border-right: solid grey 1px; /*Border line between text*/
+    padding: 20px; 
+    font-size: larger;
+    
+}
+.menupages div:last-child{
+    flex:1; /*Last item takes up remaining space*/
+}
+
+body>div{
+    width:80%;
+    margin: auto;
+}
+.menupages a{
+    color:white;
+    text-decoration:none; 
+}
+
+.active{
+    background-color:green; 
+}
+.row{
+    border: solid green 1px; /*Adds green border*/
+    background-color: white;
+    padding: 20px;
+    margin-top:30px;
+}
+.row1 img{
+    float:left; /*Shifts image to the left position*/
+}
+
+.row img, .row p{
+    height: 200px; /*Resizes image into div*/
+}
+
+    .row img:hover { /*Flips image whenever cursor hovers image*/
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+    /*Row 2*/
+    .side-by-side{
+        display:flex;
+    }
+    .row2 img{
+        float:right;
+    }
+.row3 {
+   
+    
+     /* Controls spacing */
+    padding: 0;
+    
+}
+.modulecontainer1 {
+    display: flex;
+    margin: 10px  0px 0px 0px;
+    margin-top: 20px;
+}
+
+    .modulecontainer1 li{
+        text-align: center;
+    }
+.table th {
+    background-color: green;
+    color: white;
+    
+}
+    .listbody{
+        background-color: azure;
+    }
+.btnlink {
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    color: inherit;
+}
+
+    

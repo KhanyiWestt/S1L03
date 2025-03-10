@@ -5,50 +5,49 @@
 @{
     ViewBag.Title = "List of People";
 }
+<body class=" listbody">
+    <h2>List of People</h2>
 
-<h2>List of People</h2>
-
-@*<p>
-        @Html.ActionLink("Create New", "Create") >> In this overload it is the name and the action >> Link going nowhere.
-    </p>*@
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Age)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsAlive)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model) //For each person 
-    {
+    <table class="table">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Age)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsAlive)
-            </td>
-            @*<td>
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                </td>*@
+            <th>
+                @Html.DisplayNameFor(model => model.StudentNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.myLink)
+            </th>
         </tr>
-    }
 
-</table>
+        @foreach (var item in Model) //For each person
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailAddress)
+                </td>
+                <td>
+                    <button class="btnlink "> <a href="@Url.Content(item.myLink)">LINK</a> </button> @*Want to display 'LINK' instead of ~/html/Khanyi.html. item.myLink used to access html pages *@
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</body>

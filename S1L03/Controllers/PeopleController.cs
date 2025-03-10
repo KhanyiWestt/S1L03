@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 
+
 namespace S1L03.Controllers
 {
     public class PeopleController : Controller
@@ -11,11 +12,11 @@ namespace S1L03.Controllers
         {
             List<Models.PersonModel> people = new List<Models.PersonModel>();
 
-            people.Add(new Models.PersonModel { FirstName = "Name 1", LastName = "Surname 1", Age = 1, IsAlive = true });
-            people.Add(new Models.PersonModel { FirstName = "Name 2", LastName = "Surname 2", Age = 2, IsAlive = false });
-            people.Add(new Models.PersonModel { FirstName = "Name 3", LastName = "Surname 3", Age = 3, IsAlive = true });
-            people.Add(new Models.PersonModel { FirstName = "Name 4", LastName = "Surname 4", Age = 4, IsAlive = false });
-            people.Add(new Models.PersonModel { FirstName = "Name 5", LastName = "Surname 5", Age = 5, IsAlive = true });
+            people.Add(new Models.PersonModel { StudentNumber = "u24719872", Name = "Khanyisile", Surname ="Mazibuko", EmailAddress = "u24719872@tuks.co.za", myLink="~/Html/Khanyi.html"});//~/content/...used to access static files
+            people.Add(new Models.PersonModel { StudentNumber = "u22585762", Name = "Ashleigh", Surname = "Hullet", EmailAddress = "u2258762@tuks.co.za" , myLink="~/Html/Ashleigh.html"});
+            people.Add(new Models.PersonModel { StudentNumber = "u24652777", Name = "Unathi", Surname = "Ledweba", EmailAddress= "u24652777@tuks.co.za", myLink="~/Html/Unathi.html"});
+            people.Add(new Models.PersonModel { StudentNumber = "u24687406", Name = "Ntsika", Surname= "Makama", EmailAddress = "u24687406@tuks.co.za", myLink="~/Html/Ntsika.html" });
+            people.Add(new Models.PersonModel { StudentNumber = "u24829839", Name = "Lesedi", Surname = "Magondo", EmailAddress = "u24829839@tuks.co.za", myLink="~/Html/Lesedi.html"});
 
             return View(people);
 

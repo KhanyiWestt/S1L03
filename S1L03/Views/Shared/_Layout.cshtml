@@ -19,6 +19,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="../Content/Site.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -32,10 +33,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Simple starting page", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    
 
                     @*  The "@" grabs the C# and gives an Action
                         Actual Text is "Home" whilst it
@@ -43,10 +45,22 @@
                         called by the "Home"Controller
                     *@
 
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("ListPeople", "ListPeople", "People")</li> @*added to the menu*@
+                    <li>
+                        <div class="dropdown">
+                            <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> 
+                                List of People
+                            </button>
+                            <ul class="dropdown-menu">
+
+                                <li><<a class="dropdown-item" href="/People/ListPeople">Complete list of people</a></li>@*Accessing dynamic view by accessing controller and its action*@
+                                <li><a class="dropdown-item" href="~/Html/Khanyi.html">Khanyi</a></li> @*Can only do this way if it is static files and does not rely on the controller*@
+                                <li><a class="dropdown-item" href="~/Html/Ashleigh.html">Ashleigh</a></li>
+                                <li><a class="dropdown-item" href="~/Html/Unathi.html">Unathi</a></li>
+                                <li><a class="dropdown-item" href="~/Html/Ntsika.html">Ntsika</a></li>
+                                <li><a class="dropdown-item" href="~/Html/Lesedi.html">Lesedi</a></li>
+                            </ul>
+                        </div>
+                    </li> @*drop down menu. Using bootstrap(a CSS framework) which helps us generate CSS code  *@
                 </ul>
             </div>
         </div>

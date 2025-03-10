@@ -9,17 +9,23 @@ namespace S1L03.Models
         //Complete the property details
         //This is the "Model" of "data source"
 
-        [Display(Name = "First Name")] //Add as decorator
-        public string FirstName { get; set; }
+        [Required(ErrorMessage = "Student Number is required")]
 
-        [Display(Name = "Last Name")] //Add as decorator
-        public string LastName { get; set; }
+        [Display(Name = "Student Number")] //Add as decorator
+        public string StudentNumber { get; set; } 
+
+        [Display(Name = "Name")] //Add as decorator
+        public string Name { get; set; }
         
-        [Display(Name = "Current Age")] //Add as decorator
-        public int Age { get; set; } = 0;
+        [Display(Name = "Surname")] //Add as decorator
+        public string Surname { get; set; }
 
-        [Display(Name = "Living Status")] //Add as decorator
+        [Required(ErrorMessage = "Email is required.")]
+        [Display(Name = "Email Address")] //Add as decorator
         // [Required(ErrorMessage = "Name is mandatory")]=> Example of manditory decorator
-        public bool IsAlive { get; set; } = true;
+        public string EmailAddress{ get; set; }
+
+        [Display(Name = "Link to personal page")]
+        public string myLink { get; set; }//Adding myLink property of type string
     }
 }

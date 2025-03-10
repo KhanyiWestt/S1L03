@@ -39,7 +39,7 @@ namespace S1L03
                 //The default is "Home" and the Action is "Index" action and the ID is the optional URL parameter.
                 //Do not spec action or controller it will execute default.
 
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "People", action = "ListPeople", id = UrlParameter.Optional }
             );
         }
     }
